@@ -1,1 +1,56 @@
-erm
+
+	A simple set of php scripts that should take some of the pain
+	out of developing in PHP, each file states it's dependencies 
+	if it has any in the comment at the top of the file.
+	
+	file.class.inc.php
+		
+		- file::get_mime($path)
+			Gets the mime type of the given file using the best 
+			method available, with a fall-back to using the file
+			extension.
+		
+		- file::rmrf($path)
+			Recursively deleted all of the files in the given folder
+			and then removes that folder.
+	
+	http.class.inc.php
+		
+		- http::post($url, $data, $return = true)
+			Sends HTTP POST data to the given url, $data should be
+			an array where the keys represent the form names and the
+			values represent the values. The $return parameter
+			can be set to false if the result is not needed.
+		
+		- http::get($url, $data = null, $return = true)
+			Effectively the same as above, but using GET. The $data
+			parameter is now optional also.
+		
+		- http::force_download($path)
+			Sends the headers needed to force the download of the
+			given file, then reads out the file.
+		
+		- http::force_download_raw($name, $size, $data)
+			Does the same task as above but takes data directly,
+			not from a file. $name is the name of the file that
+			should be shown in the download window, $size is the 
+			files size and $data is the raw data.
+	
+	string.func.inc.php
+		
+		- str_starts_with($needle, $haystack)
+			Returns true if $haystack starts with $needle, false if
+			not
+		
+		- str_ends_with($needle, $haystack)
+			Returns true if $haystack ends with $needle, false if not
+		
+		- str_contains($needle, $haystack)
+			Returns true if $haystack contains one or more occurrences
+			of $needle
+		
+		- strlen_between($subject, $x, $y)
+			Returns true if $subject is longer than $x and shorter
+			than $y
+
+
