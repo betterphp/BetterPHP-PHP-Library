@@ -3,6 +3,14 @@
 	out of developing in PHP, each file states it's dependencies 
 	if it has any in the comment at the top of the file.
 	
+	error.func.inc.php
+		
+		- custom_error($msg)
+			This is the same as trigger_error() except that it will
+			shown the file info from the locatin where the function
+			it is used in is called, not the line trigger_error() is
+			called.
+	
 	file.class.inc.php
 		
 		- file::get_mime($path)
@@ -35,6 +43,10 @@
 			not from a file. $name is the name of the file that
 			should be shown in the download window, $size is the 
 			files size and $data is the raw data.
+	
+	mail.class.inc.php
+		
+		Unfinished, see source.
 	
 	string.func.inc.php
 		
