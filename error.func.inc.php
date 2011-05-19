@@ -3,7 +3,7 @@
 /*
  *
  *		Effectivly the same as trigger_error, but shows the right file
- *		and line numebrs when used witin a function.
+ *		and line numbers when used within a function.
  *
  */
 
@@ -14,7 +14,7 @@ function custom_error($msg){
 		$prepend	= ini_get('error_prepend_string');
 		$append		= ini_get('error_append_string');
 		
-		echo "{$prepend}\nWarning: $msg in {$info['file']} on line {$info['line']}\n{$append}\n\n";
+		echo "{$prepend}\nWarning: {$msg} in {$info['file']} on line {$info['line']}\n{$append}\n\n";
 	}
 }
 
