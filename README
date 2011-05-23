@@ -104,5 +104,11 @@
 		- strlen_between($subject, $x, $y)
 			Returns true if $subject is longer than $x and shorter
 			than $y
-
+	
+	validate.class.inc.php
+		
+		- mysql_unique($table_name, $column_name, $column_value)
+			Returns true if the given column has the given value, false
+			if not. Both the column_name and the column_value can be
+			arrays.
 
