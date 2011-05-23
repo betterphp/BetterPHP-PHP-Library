@@ -48,6 +48,41 @@
 		
 		Unfinished, see source.
 	
+	mysql.class.inc.php
+	
+		- mysql->__construct($server, $user, $pass, $db)
+			Connects tothe database, returning a object that has the
+			following methods for working with mysql. The effects of
+			magic_quotes are removed at this point also.
+		
+		- mysql->escape(&$data, $return = false)
+			Applies mysql_real_escape_string to the $data variable,
+			if $return is set to true the escaped value will also be
+			returned.
+		
+		- mysql->query($sql)
+			Sends the given SQL code to the MySQL server and stores
+			the result resource internally for use with the following.
+		
+		- mysql->ub_query($sql)
+			The same as above, but unbuffered.
+		
+		- mysql->fetch(&$row)
+			Fetches the current row from the internal result resource.
+			This will return false once the end of the table is reached.
+			The $row variable will be populated with an assoc array
+			representing the table.
+		
+		- mysql->fetch_array()
+			Similar to the above, except an array of rows is returned.
+		
+		- mysql->fetch_cell(&$cell)
+			Fetches the first cell in the first row of a query result.
+		
+		- mysql->fetch_last_id(&id)
+			Fetched the last auto_increment number that the MySQL
+			server generated.
+	
 	string.func.inc.php
 		
 		- str_starts_with($needle, $haystack)
