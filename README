@@ -3,6 +3,11 @@
 	out of developing in PHP, each file states it's dependencies 
 	if it has any in the comment at the top of the file.
 	
+	array.func.inc.php
+		
+		- array_is_multi($array)
+			checks to see if the given array is multidimensional.
+	
 	error.func.inc.php
 		
 		- custom_error($msg)
