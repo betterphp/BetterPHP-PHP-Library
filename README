@@ -107,8 +107,17 @@
 	
 	validate.class.inc.php
 		
-		- mysql_unique($table_name, $column_name, $column_value)
+		- validate::mysql_unique($table_name, $column_name, $column_value)
 			Returns true if the given column has the given value, false
 			if not. Both the column_name and the column_value can be
 			arrays.
+		
+		- validate::email($email)
+			Returns true if the given email address is of a valid form,
+			false if not. Both this and the below url function have methods
+			of performing strict validation with and without filter_var.
+		
+		- validate::url($url)
+			Returns true if the given url is valid, can be reached and
+			gives the HTTP status code 200.
 
