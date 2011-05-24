@@ -6,6 +6,7 @@
  * 
  *		Requirements	- mysql.class.inc.php
  *						- array.func.inc.php
+ *						- string.func.inc.php
  *
  */
 
